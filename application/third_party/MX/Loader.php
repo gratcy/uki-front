@@ -299,7 +299,6 @@ class MX_Loader extends CI_Loader
 		
 		if ($misc) {
 			$this->_ci_load(array('_ci_view' => 'header', '_ci_vars' => $this->_ci_prepare_view_vars($vars), '_ci_return' => $return));
-			$this->_ci_load(array('_ci_view' => 'sidebar', '_ci_vars' => $this->_ci_prepare_view_vars($vars), '_ci_return' => $return));
 			$this->_ci_load(array('_ci_view' => $view, '_ci_vars' => $this->_ci_prepare_view_vars($vars), '_ci_return' => $return));
 			$this->_ci_load(array('_ci_view' => 'footer', '_ci_vars' => $this->_ci_prepare_view_vars($vars), '_ci_return' => $return));
 		}
