@@ -14,6 +14,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <![endif]-->
     <title>UKI</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url(); ?>/assets/img/favicon.ico">
+
     <!--  Bootstrap Style -->
     <link href="<?php echo base_url(); ?>assets/css/bootstrap.css" rel="stylesheet" />
      <!--  Font-Awesome Style -->
@@ -63,148 +65,7 @@
                         </a>
                        
                     </li>
-                    <li class="dropdown">
-                        <a >PROFIL
-                            <span></span>
-
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-left">
-                            <li>
-                                <a href="tentang.php.html">
-                                    <i class="fa fa-edit"></i>Tentang Fakultas
-              <span></span>
-                                </a>
-
-                            </li>
-                            <li>
-                                <a href="visimisi.php.html">
-                                    <i class="fa fa-bullhorn"></i>Visi & Misi Fakultas 
-              <span></span>
-                                </a>
-
-                            </li>
-							<li>
-                                <a href="visimisis1.php.html">
-                                    <i class="fa fa-bullhorn"></i>Visi & Misi Sastra S1 
-              <span></span>
-                                </a>
-
-                            </li>
-							<li>
-                                <a href="visimisid3.php.html">
-                                    <i class="fa fa-bullhorn"></i>Visi & Misi Sastra D3 
-              <span></span>
-                                </a>
-
-                            </li>
-							<li>
-                                <a href="struktur.php.html">
-                                    <i class="fa fa-bullhorn"></i>Struktur Organisasi
-              <span></span>
-                                </a>
-
-                            </li>
-							<li>
-                                <a href="staff.php.html">
-                                    <i class="fa fa-bullhorn"></i>Profil Staff
-              <span></span>
-                                </a>
-
-                            </li>
-                          
-
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="<?php echo base_url(); ?>">AKADEMIK
-                            <span></span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-left">
-
-                            <li>
-                                <a href="kurikulum.php.html">
-                                    <i class="fa fa-paper-plane-o"></i>Kurikulum Fakultas
-              <span></span>
-                                </a>
-
-                            </li>
-                            <li>
-                                <a href="dualdegree.php.html">
-                                    <i class="fa fa-folder-open-o"></i>Program Dual Degree
-              <span></span>
-                                </a>
-
-                            </li>
-                            <li>
-                                <a href="programd3.php.html">
-                                    <i class="fa fa-bullhorn"></i>Alih Program D3
-              <span></span>
-                                </a>
-
-                            </li>
-							<li>
-                                <a href="klskaryawan.php.html">
-                                    <i class="fa fa-bullhorn"></i>Kelas Karyawan
-              <span></span>
-                                </a>
-
-                            </li>
-                        </ul>
-                    </li>
-
-                   
-                    <li class="dropdown">
-                        <a href="<?php echo base_url(); ?>">LAYANAN 
-                            <span></span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-left">
-
-                            <li>
-                                <a href="tatausaha.php.html">
-                                    <i class="fa fa-power-off"></i>Tata Usaha
-              <span></span>
-                                </a>
-
-                            </li>
-                             <li>
-                                <a href="lab.php.html">
-                                    <i class="fa fa-tag"></i>Lab Bahasa
-              <span></span>
-                                </a>
-
-                            </li>
-                            <li>
-                                <a href="pusatbhs.php.html">
-                                    <i class="fa fa-map-marker"></i>Pusat Pelayanan Bahasa
-              <span></span>
-                                </a>
-
-                            </li>
-                            <li>
-                                <a href="korean.php.html">
-                                    <i class="fa fa-flask"></i>Korean Center
-              <span></span>
-                                </a>
-
-                            </li>
-                           
-                           
-                           
-                        </ul>
-                    </li>
-                     <li class="dropdown">
-                        <a href="galeri.php.html">GALERI 
-                            <span></span>
-                        </a>
-
-                    </li>
-					<li class="dropdown">
-                        <a href="kontak.php.html">KONTAK 
-                            <span></span>
-                        </a>
-
-                    </li>
+                    <?php echo __get_menus(); ?>
                 </ul>
             </div>
         </div>

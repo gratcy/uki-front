@@ -432,6 +432,10 @@ padding:30px;
     padding: 20px 100px 25px 100px;
     color: #fff;
 }
+.general-subhead h1 {
+  text-transform: uppercase;
+}
+
  #request-quote {
     background-color:#565AB1;
     padding:20px;
@@ -726,3 +730,6 @@ padding: 1px;
    display:none!important;
   }
 }
+
+#main-slider .item > a > img {height: 600px}
+#blog-footer-div > .media > .pull-left > img {width: 64px;height: 64px}

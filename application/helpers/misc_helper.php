@@ -32,3 +32,38 @@ function __get_day($date) {
     $arr = array('Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu');
     return $arr[$date];
 }
+
+function __get_menus() {
+    $CI =& get_instance();
+    $CI -> load -> model('home/Home_model');
+    $menus = $CI -> Home_model -> __get_menus($CI -> config -> config['faculty'], 0);
+    $res = '';
+    foreach ($menus as $key => $v) {
+        $res .= '<li class="dropdown">';
+        $res .= '<a href="'.base_url('page/' . $v -> pid).'">'.strtoupper($v -> ptitle).'<span></span></a>';
+        $childs = $CI -> Home_model -> __get_menus($CI -> config -> config['faculty'], $v -> pid);
+        if (count($childs) > 0) {
+            $res .= '<ul class="dropdown-menu dropdown-menu-left">';
+            foreach ($childs as $k1 => $v1) {
+                $res .= '<li>';
+                $res .= '<a href="'.base_url('page/' . $v1 -> pid).'"><i class="fa fa-arrow-right"></i>'.$v1 -> ptitle.'</a>';
+                $res .= '</li>';
+            }
+            $res .= '</ul>';
+        }
+        $res .= '</li>';
+    }
+    return $res;
+}
+
+function __get_last_posts() {
+    $CI =& get_instance();
+    $CI -> load -> model('home/Home_model');
+    $posts = $CI -> Home_model -> __get_last_posts($CI -> config -> config['faculty'], 2);
+    return $posts;
+}
+
+function __grep_image_url($html) {
+    preg_match_all("<img[^']*?src=\"([^']*?)\"[^']*?>",$html, $result);
+    if (!empty($result[1][0])) return $result[1][0];
+}
