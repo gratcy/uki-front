@@ -22,6 +22,9 @@ body {
 .text-center {
     text-align:center;
 }
+.clear {
+  clear: both;
+}
 section {
     margin:70px 0px 70px 0px;
 }

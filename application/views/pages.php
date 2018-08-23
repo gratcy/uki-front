@@ -4,10 +4,11 @@
    </div>
      <!--./ Gereral Subhead End -->
     
-    <section >
+    <section id="port-folio">
         <div class="container">
-            <div class="row ">
+            <div class="row">
                 <?php echo $data[0] -> pcontent; ?>
+                <?php echo $plugins; ?>
             </div>
            </div>
     </section>

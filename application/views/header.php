@@ -27,7 +27,7 @@
         <!--  Google Font Style -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
      <!--  Custom Style -->
-    <link href="<?php echo base_url(); ?>assets/css/style.css" rel="stylesheet" />
+    <link href="<?php echo base_url(); ?>assets/css/style.css?<?php echo time(); ?>" rel="stylesheet" />
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>

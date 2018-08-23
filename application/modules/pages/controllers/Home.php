@@ -5,11 +5,13 @@ class Home extends MX_Controller {
 	function __construct() {
 		parent::__construct();
 		$this -> load -> model('Pages_model');
+		$this -> load -> library('Plugins_lib');
 	}
 
 	public function index($id)
 	{
 		$data['data'] = $this -> Pages_model -> __get_pages_detail($this -> config -> config['faculty'], $id);
+		$data['plugins'] = $this -> plugins_lib -> __get_plugins($this -> config -> config['faculty'], $id);
 		$this->load->view('pages', $data);
 	}
 }

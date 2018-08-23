@@ -25,6 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $config['base_url'] = getenv('BASEURL');
 $config['faculty'] = getenv('FACULTY');
+$config['gallery'] = 21;
 $config['upload']['host'] = getenv('ASSETS_URL');
 $config['upload']['media']['path'] = '/';
 $config['upload']['gallery']['path'] = 'gallery/';
