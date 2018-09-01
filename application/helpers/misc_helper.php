@@ -1,5 +1,10 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+function __get_livechat_url($type) {
+    $CI =& get_instance();
+    return $type === 1 ? $CI -> config -> config['livechat']['host'] : str_ireplace('/', '\/', $CI -> config -> config['livechat']['host']);
+}
+
 function __get_date($str, $type=1) {
 	$str = strtotime($str);
 	if ($type == 1) return date('d/m/Y', $str);
@@ -46,7 +51,7 @@ function __get_menus() {
             $res .= '<ul class="dropdown-menu dropdown-menu-left">';
             foreach ($childs as $k1 => $v1) {
                 $res .= '<li>';
-                $res .= '<a href="'.base_url('page/' . $v1 -> pid).'"><i class="fa fa-arrow-right"></i>'.$v1 -> ptitle.'</a>';
+                $res .= '<a href="'.base_url('page/' . $v1 -> pid).'">'.$v1 -> ptitle.'</a>';
                 $res .= '</li>';
             }
             $res .= '</ul>';

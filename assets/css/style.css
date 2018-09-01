@@ -58,9 +58,13 @@ section {
 .menu-back {
     background-color:#34296F;  
 }
+.navbar-brand {
+  padding: 0;
+  margin: -10px 0; 
+}
 /*Logo Image */
 .navbar-brand-logo {
-    max-height:60px;
+    max-height:100px;
     padding-bottom:10px;
 }
 /*top-menu links color*/
@@ -123,16 +127,22 @@ background-color: rgba(221, 221, 221, 0);
 .navbar-default .navbar-toggle {
 border-color: #A0761D;
 }
-
+.navbar > .container {
+  padding: 20px;
+}
 /*=====================================
    SOCIAL HEADER STYLE SECTION
     ===================================*/
 .div-social-top {
     background-color:#565AB1;
     min-height:40px;
-    padding:20px 50px 10px 50px;
+    padding:10px 50px 10px 50px;
     color:#fff;
     font-size:17px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    margin-top: 40px;
 }
     .div-social-top a,.div-social-top a:hover {
         color:#fff;
@@ -432,8 +442,10 @@ padding:30px;
  ===================================*/
 .general-subhead {
     background-color: #2B3C69;
-    padding: 20px 100px 25px 100px;
+    padding: 100px 100px 25px 100px;
     color: #fff;
+    position: relative;
+    width: 100%;
 }
 .general-subhead h1 {
   text-transform: uppercase;
@@ -722,17 +734,18 @@ padding: 1px;
    Media Queries
     ===================================*/
 
-       @media all and (max-width: 786px) and (min-width: 100px) {
+@media all and (max-width: 786px) and (min-width: 100px) {
   .carousel-caption{
    display:none!important;
   }
 }
        
-       @media all and (max-width: 845px) and (min-width: 100px) {
+@media all and (max-width: 845px) and (min-width: 100px) {
   .div-social-top{
    display:none!important;
   }
 }
-
-#main-slider .item > a > img {height: 600px}
+#main-slider {padding-top: 85px;}
+#main-slider .item > a > img {width: 100%; height: auto;}
 #blog-footer-div > .media > .pull-left > img {width: 64px;height: 64px}
+#mibew-agent-button {bottom: 5px; position: fixed;right: 5px;z-index: 10000;}
