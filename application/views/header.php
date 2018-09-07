@@ -37,6 +37,19 @@
 </head>
 <body>
 
+    <!--./ Top Menu End -->
+    <div class="div-social-top">
+        <i class="fa fa-globe "></i>E-mail:  info@uki.ac.id  | <i class="fa fa-mobile "></i>Call: +021-8092425 &nbsp;
+        <a href="<?php echo base_url(); ?>">
+            <i class="fa fa-facebook-square "></i>
+        </a>
+        <a href="<?php echo base_url(); ?>">
+            <i class="fa fa-linkedin-square "></i>
+        </a>
+        <a href="<?php echo base_url(); ?>">
+            <i class="fa fa-pinterest-square "></i>
+        </a>
+    </div>
    <div class="navbar navbar-default navbar-fixed-top menu-back">
         <div class="container">
 
@@ -69,19 +82,6 @@
                 </ul>
             </div>
         </div>
-    </div>
-    <!--./ Top Menu End -->
-    <div class="div-social-top">
-        <i class="fa fa-globe "></i>E-mail:  info@yourdomain.com   | <i class="fa fa-mobile "></i>Call: : +000 - 123 -45678  |  <i class="fa fa-map-marker "></i>Country : USA &nbsp;
-        <a href="<?php echo base_url(); ?>">
-            <i class="fa fa-facebook-square "></i>
-        </a>
-        <a href="<?php echo base_url(); ?>">
-            <i class="fa fa-linkedin-square "></i>
-        </a>
-        <a href="<?php echo base_url(); ?>">
-            <i class="fa fa-pinterest-square "></i>
-        </a>
     </div>
     <div class="clear"></div>
     <!--./ Social Div End -->
