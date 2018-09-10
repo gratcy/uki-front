@@ -30,4 +30,5 @@ $config['upload']['host'] = getenv('ASSETS_URL');
 $config['upload']['media']['path'] = '/';
 $config['upload']['gallery']['path'] = 'gallery/';
 $config['upload']['slideshow']['path'] = 'slideshow/';
+$config['upload']['testimonial']['path'] = 'testimonial/';
 $config['livechat']['host'] = getenv('LIVECHAT_URL');

@@ -19,4 +19,9 @@ class Home_model extends CI_Model {
 		$sql = $this -> db -> query("SELECT * FROM posts_tab WHERE pstatus=1 AND pfaculty=".$faculty." ORDER BY pid DESC LIMIT " . $limit, FALSE);
 		return $sql -> result();
 	}
+
+	function __get_last_testimonial($faculty, $limit) {
+		$sql = $this -> db -> query("SELECT * FROM testimonial_tab WHERE tstatus=1 AND tfaculty=".$faculty." ORDER BY tid DESC LIMIT " . $limit, FALSE);
+		return $sql -> result();
+	}
 }

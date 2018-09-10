@@ -10,6 +10,7 @@ class Home extends MX_Controller {
 	public function index()
 	{
 		$data['slideshow'] = $this -> Home_model -> __get_slideshow($this -> config -> config['faculty']);
+		$data['testimonial'] = $this -> Home_model -> __get_last_testimonial($this -> config -> config['faculty'], 3);
 		$this->load->view('home', $data);
 	}
 }

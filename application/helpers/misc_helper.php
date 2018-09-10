@@ -22,8 +22,10 @@ function __get_upload_file($file, $type=1) {
 		return $CI -> config -> config['upload']['host'] . $CI -> config -> config['upload']['media']['path'] . $file;
 	elseif ($type == 2)
 		return $CI -> config -> config['upload']['host'] . $CI -> config -> config['upload']['gallery']['path'] . $file;
-	else
+    elseif ($type == 3)
 		return $CI -> config -> config['upload']['host'] . $CI -> config -> config['upload']['slideshow']['path'] . $file;
+    else
+        return $CI -> config -> config['upload']['host'] . $CI -> config -> config['upload']['testimonial']['path'] . $file;
 }
 
 function __get_month($date) {

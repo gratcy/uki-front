@@ -316,29 +316,28 @@
       <div id="media-sec">
         <div class="container">
 
-            <div class="row">
+            <div class="row testimonial">
                 <div class="col-lg-12 col-md-12" >
                     <div class="text-center">
-                        <h3>WHAT MEDIA SAY'S ABOUT US</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit onec molestie non sem vel condimentum. </p>
+                        <h3>KATA MEREKA, TENTANG UKI</h3>
                         <br />
                         <br />
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6">
+                <?php foreach($testimonial as $k => $v) : ?>
+                <div class="col-lg-4 col-md-4">
                     <blockquote>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit onec molestie non sem vel condimentum. </p>
-                        <small>Consectetur adipiscing elit</small>
+                        <p><?php echo $v -> ttestimony; ?></p>
                     </blockquote>
-
+                    <div class="col-lg-4">
+                        <img src="<?php echo __get_upload_file($v -> tphoto, 4); ?>">
+                    </div>
+                    <div class="col-lg-8">
+                        <p><?php echo $v -> tname; ?></p>
+                        <p><b><?php echo $v -> tcompany; ?></b></p>
+                    </div>
                 </div>
-                <div class="col-lg-6 col-md-6">
-                    <blockquote>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit onec molestie non sem vel condimentum. </p>
-                        <small>Consectetur adipiscing elit</small>
-                    </blockquote>
-
-                </div>
+                <?php endforeach; ?>
             </div>
 
         </div>

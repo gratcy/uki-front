@@ -5,22 +5,16 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4" id="about-ftr">
                     <i class="fa fa-building fa-2x"></i>
-                    <span>A Small Introduction</span>
-                    <small>replace this dummy text with your text</small>
+                    <span>SASTRA INGGRIS</span>
+                    <small>sekilas tentang Sastra Inggris</small>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                             Praesent suscipit sem vel ipsum elementum venenatis. 
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                             Praesent suscipit sem vel ipsum elementum venenatis.
-                     
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                             Praesent suscipit sem vel ipsum elementum venenatis.
+Fakultas Sastra didirikan pada tahun 1953 sebagai wujud dari visi para pendiri Universitas Kristen Indonesia yang melihat pentingnya tenaga-tenaga kerja terampil yang mampu berkomunikasi dengan komunitas internasional yang diperlukan Negara Republik Indonesia yang pada waktu itu belum lama merdeka. Sejak didirikannya sampai sekarang.
                     </p>
                 </div>
                 <div class="col-lg-4 col-md-4">
                     <i class="fa fa-paper-plane-o fa-2x"></i>
                     <span>From the blog</span>
-                    <small>replace this dummy text with your text</small>
+                    <small>News updates about UKI Fakultas Sastra</small>
                     <div id="blog-footer-div">
                         <?php
                         $posts = __get_last_posts();
@@ -44,22 +38,23 @@
                 <div class="col-lg-4 col-md-4">
                     <i class="fa fa-sliders fa-2x"></i>
                     <span>Our location</span>
-                    <small>replace this dummy text with your text</small>
-                    234/90, Newyork Street , USA
                     <br />
-                    Call: 456-0980-0000
-                     <br />
-                    mail: info@domain.com
+
+<b>Kampus Cawang</b>
+                    <br />
+Jl.Mayjen Sutoyo No 2. Jakarta
+                    <br />
+13630 - Indonesia
+                    <br />
+021-8092425
                     <br />
                     <br />
-                    <form role="form">
-                        <div class="input-group">
-                            <input type="text" class="form-control" autocomplete="off" placeholder="Enter your email" required />
-                            <span class="input-group-btn">
-                                <button class="btn btn-primary" type="button">Subdcribe!</button>
-                            </span>
-                        </div>
-                    </form>
+
+<b>Kampus Diponegoro</b>
+                    <br />
+Jl.Diponegoro No. 84-86, Jakarta Pusat
+                    <br />
+10430 - Indonesia 021-3920174
                 </div>
             </div>
         </div>
