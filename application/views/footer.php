@@ -6,7 +6,7 @@
                 <div class="col-lg-4 col-md-4" id="about-ftr">
                     <i class="fa fa-building fa-2x"></i>
                     <span>SASTRA INGGRIS</span>
-                    <small>sekilas tentang Sastra Inggris</small>
+                    <small>Sekilas tentang Sastra Inggris</small>
                     <p>
 Fakultas Sastra didirikan pada tahun 1953 sebagai wujud dari visi para pendiri Universitas Kristen Indonesia yang melihat pentingnya tenaga-tenaga kerja terampil yang mampu berkomunikasi dengan komunitas internasional yang diperlukan Negara Republik Indonesia yang pada waktu itu belum lama merdeka. Sejak didirikannya sampai sekarang.
                     </p>
@@ -38,7 +38,7 @@ Fakultas Sastra didirikan pada tahun 1953 sebagai wujud dari visi para pendiri U
                 <div class="col-lg-4 col-md-4">
                     <i class="fa fa-sliders fa-2x"></i>
                     <span>Our location</span>
-                    <br />
+                    <small>Our Zones are strategically located throughout east and central Jakarta</small>
 
 <b>Kampus Cawang</b>
                     <br />
