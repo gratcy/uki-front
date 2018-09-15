@@ -74,3 +74,22 @@ function __grep_image_url($html) {
     preg_match_all("<img[^']*?src=\"([^']*?)\"[^']*?>",$html, $result);
     if (!empty($result[1][0])) return $result[1][0];
 }
+
+function __limit_word($text, $limit) {
+    $text = strip_tags($text);
+    $strings = $text;
+    if (strlen($text) > $limit) {
+        $words = str_word_count($text, 2);
+        $pos = array_keys($words);
+        if(sizeof($pos) > $limit) {
+            $text = substr($text, 0, $pos[$limit]) . '...';
+        }
+        return $text;
+    }
+    return $text;
+}
+
+function __get_image_url($text) {
+    preg_match('/<img.+src=[\'"](?P<src>.+?)[\'"].*>/i', $text, $result);
+    return isset($result[1]) ? $result[1] : '';
+}

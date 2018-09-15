@@ -75,37 +75,32 @@
         </div>
     </section>
     <!--./ Home Service End -->
-    <section id="vedio-sec">
+    <section id="vedio-sec news-updated">
         <div class="container">
             <div class="row pad-top-botm">
                 <div class="col-lg-6 col-md-6">
-                    <h2>What Is Special About Us ? </h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         
-                    </p>
-                    <button class="btn btn-primary" type="button">
+                    <h2>Berita Terkini </h2>
+                    <?php foreach($newsupdate as $k => $v) : ?>
+                        <div class="col-lg-4 col-md-4 news-updated-three">
+                        <img src="<?php echo __get_image_url($v -> pcontent); ?>">
+                        <p class="newsupdate-title">
+                            <?php echo $v -> ptitle; ?>
+                        </p>
+                        <p class="newsupdate-date">last updated <?php echo __get_date($v -> pdate, 1); ?></p>
+                        <p style="text-align: justify;">
+                            <?php echo __limit_word($v -> pcontent, 15); ?>
+                        </p>
+                    <button class="btn btn-primary" type="button" onclick="window.location.href='<?php echo base_url('post/' . $v -> pid); ?>'">
                         Read Full Details <span class="badge">+</span>
                     </button>
                     <br />
                     <br />
                 </div>
+                <?php endforeach; ?>
+                </div>
 
                 <div class="col-lg-6 col-md-6">
-                    <iframe class="vedio-style" src="" ></iframe>
-
-
-
+                    <h2>Events </h2>
                 </div>
             </div>
         </div>
