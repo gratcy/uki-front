@@ -40,34 +40,14 @@
     </div>
     <!--./ Welcome Section End -->
     <section id="home-service" style="margin-top:20px;">
-        <div class="container">
+        <div class="container announcement">
             <div class="row ">
-                <div class="col-lg-4 col-md-4  col-sm-4 "  >
-                    <i  class="fa fa-desktop fa-5x  icon-round  faa-ring animated"></i>
-                    <h4><strong>Responsive Design</strong> </h4>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                </div>
-                <div class="col-lg-4 col-md-4  col-sm-4" >
-                    <i class="fa fa-paper-plane-o  fa-5x icon-round  faa-pulse animated"></i>
-                    <h4><strong>Easy To Customize</strong> </h4>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                </div>
-                <div class="col-lg-4 col-md-4  col-sm-4" >
+                <div class="col-lg-12 col-md-12  col-sm-12" >
                     <i class="fa fa-bullhorn  fa-5x icon-round faa-horizontal animated"></i>
-                    <h4><strong>Clean Coding Used </strong></h4>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
+                    <h4><strong>Pengumuman </strong></h4>
+                    <?php foreach($announcement as $k => $v) : ?>
+                        <?php echo $v -> pcontent; ?>
+                    <?php endforeach;?>
                 </div>
 
             </div>
@@ -75,22 +55,26 @@
         </div>
     </section>
     <!--./ Home Service End -->
-    <section id="vedio-sec news-updated">
+    <section id="news-updated">
         <div class="container">
             <div class="row pad-top-botm">
                 <div class="col-lg-6 col-md-6">
                     <h2>Berita Terkini </h2>
                     <?php foreach($newsupdate as $k => $v) : ?>
                         <div class="col-lg-4 col-md-4 news-updated-three">
-                        <img src="<?php echo __get_image_url($v -> pcontent); ?>">
+                        <img src="<?php echo __get_image_url($v -> pcontent); ?>" alt="<?php echo $v -> ptitle; ?>" title="<?php echo $v -> ptitle; ?>">
+                        <div class="block-home-title">
                         <p class="newsupdate-title">
                             <?php echo $v -> ptitle; ?>
                         </p>
+                        </div>
                         <p class="newsupdate-date">last updated <?php echo __get_date($v -> pdate, 1); ?></p>
+                        <div class="block-home-posts">
                         <p style="text-align: justify;">
                             <?php echo __limit_word($v -> pcontent, 15); ?>
                         </p>
-                    <button class="btn btn-primary" type="button" onclick="window.location.href='<?php echo base_url('post/' . $v -> pid); ?>'">
+                        </div>
+                    <button class="btn btn-primary" title="<?php echo $v -> ptitle; ?>" type="button" onclick="window.location.href='<?php echo base_url('post/' . $v -> pid); ?>'">
                         Read Full Details <span class="badge">+</span>
                     </button>
                     <br />
@@ -101,208 +85,41 @@
 
                 <div class="col-lg-6 col-md-6">
                     <h2>Events </h2>
+                    <?php foreach($lastevents as $k => $v) : ?>
+                    <div class="col-lg-12 event-item">
+                        <div class="col-lg-2" style="padding-left: 0">
+                        <div class="thumb-calendar-event"><div class="thumb-calendar-short-date"><p class="thumb-month"><?php echo date('M', strtotime($v -> edate));?> '<?php echo date('y', strtotime($v -> edate));?></p><p class="thumb-date"><?php echo date('d', strtotime($v -> edate));?></p></div></div>
+                        </div>
+                        <div class="col-lg-8 event-title">
+                            <a href="<?php echo base_url('event/' . $v -> eid); ?>" title="<?php echo $v -> etitle; ?>"><?php echo $v -> etitle; ?></a>
+                        </div>
+                    </div>
+                    <?php endforeach;?>
                 </div>
             </div>
         </div>
     </section>
     <!--./ vedio-sec End -->
-    <div class="middle-section">
-        <div class="container">
-            <div class="row ">
-                <div class="col-lg-12 col-md-12 ">
-                    <h1>Clients Testimonials</h1>
-                    <div id="testimonials" class="carousel slide" data-ride="carousel">
-
-                        <ol class="carousel-indicators">
-                            <li data-target="#testimonials" data-slide-to="0" class=""></li>
-                            <li data-target="#testimonials" data-slide-to="1" class=""></li>
-                            <li data-target="#testimonials" data-slide-to="2" class="active"></li>
-                        </ol>
-
-                        <div class="carousel-inner">
-                            <div class="item">
-                                <div class="container center">
-                                    <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 slide-custom">
-
-                                        <h4><i class="fa fa-quote-left"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit onec molestie non sem vel condimentum. <i class="fa fa-quote-right"></i></h4>
-                                        <div class="user-img pull-right">
-                                            <img src="<?php echo base_url(); ?>assets/img/user.gif" alt="" class="img-u image-responsive" />
-                                        </div>
-                                        <h5 class="pull-right"><strong class="c-black">Lorem Dolor</strong></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="container center">
-                                    <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 slide-custom">
-                                        <h4><i class="fa fa-quote-left"></i>Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc. <i class="fa fa-quote-right"></i></h4>
-                                        <div class="user-img pull-right">
-                                            <img src="<?php echo base_url(); ?>assets/img/user2.png" alt="" class="img-u image-responsive" />
-                                        </div>
-                                        <h5 class="pull-right"><strong class="c-black">Faucibus luctus</strong></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item active">
-                                <div class="container center">
-                                    <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 slide-custom">
-                                        <h4><i class="fa fa-quote-left"></i>Sed ultricies, libero ut adipiscing fringilla, ante elit luctus lorem, a egestas dui metus a arcu condimentum. <i class="fa fa-quote-right"></i></h4>
-                                        <div class="user-img pull-right">
-                                            <img src="<?php echo base_url(); ?>assets/img/user.gif" alt="" class="img-u image-responsive" />
-                                        </div>
-                                        <h5 class="pull-right"><strong class="c-black">Sed ultricies</strong></h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--./ Testimonials End -->
-  
-    <section id="service-info">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-12 col-md-12">
-                    <h3 class="clr-main"><strong>OUR SERVICE LIST </strong></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit onec molestie non sem vel condimentum. </p>
-                    <br />
-                    <br />
-                </div>
-            </div>
-            <div class="row pad-top-botm">
-                <div class="col-lg-4 col-md-4">
-                    <div class="media">
-                        <div class="pull-left">
-                            <i class=" fa fa-folder-open-o fa-4x rotate-icon "></i>
-
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">Easy To code</h3>
-                            <p>
-                                Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc. 
-                                Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc.
-                            </p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <div class="media">
-                        <div class="pull-left">
-                            <i class="fa fa-power-off fa-4x rotate-icon "></i>
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">Best To Use</h3>
-                            <p>
-                                Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc. 
-                                Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc.
-                            </p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <div class="media">
-                        <div class="pull-left">
-                            <i class="fa fa-paper-plane-o fa-4x rotate-icon "></i>
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">Customize Friendly</h3>
-                            <p>
-                                Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc. 
-                                Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc.
-                            </p>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row pad-top-botm ">
-                <div class="col-lg-6 col-md-6">
-                    <div class="alert alert-info transparent-bk upfront-trans">
-                        <i class="fa fa-edit fa-2x "></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      
-                    </div>
-
-                    <hr />
-                    <iframe src="http://player.vimeo.com/video/18312392" class="vedio-style"></iframe>
-                </div>
-
-                <div class="col-lg-6 col-md-6">
-                    <div class="col-lg-6 col-md-6">
-
-                        <div class="alert alert-success transparent-bk upfront-trans">
-                            <i class="fa fa-folder-open-o fa-2x"></i>Lorem ipsum dolor sit amet.
-                              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </div>
-                                              
-
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-
-                        <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fenvato&amp;width=235&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false&amp;appId=438889712801266" style="border: none; overflow: hidden; width: 235px; height: 258px;"></iframe>
-
-                    </div>
-                    <div class="col-lg-12 col-md-12">
-                        <div class="alert alert-info transparent-bk upfront-trans">
-                            <i class="fa fa-info fa-2x "></i><b>JUST A  SMALL INFORMATION :  </b>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                              
-                               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!--./ Service info Section End -->
     <div class="just-stats">
         <div class="container">
             <div class="row ">
-                <div class="col-lg-3 col-md-3 ">
+                <div class="col-lg-6 col-md-6 ">
                     <div class="stats-div">
                         <i class="fa fa-rocket fa-5x"></i>
-                        <h3>3000+</h3>
-                        <h4>Projects</h4>
+                        <h3>Visi</h3>
+                        <p>Fakultas Sastra Universitas Kristen Indonesia (FS UKI) bervisi menjadi fakultas yang unggul dan bereputasi dalam dunia pendidikan, penelitian, dan pengabdian kepada masyarakat khususnya dalam bidang bahasa, sastra, dan budaya yang antisipatif terhadap perubahan di era globalisasi yang berjiwa Pancasila berdasarkan nilai-nilai kristiani.</p>
                     </div>
                 </div>
 
 
-                <div class="col-lg-3 col-md-3 ">
+                <div class="col-lg-6 col-md-6 ">
                     <div class="stats-div">
                         <i class="fa fa-globe fa-5x"></i>
-                        <h3>149+</h3>
-                        <h4>Countries</h4>
+                        <h3>Misi</h3>
+                        <p>Fakultas Sastra Universitas Kristen Indonesia (FS UKI) memiliki misi mengembangkan pendidikan Sastra Inggris dan disiplin ilmu yang berkaitan dengan program studi tersebut.</p>
                     </div>
 
-                </div>
-                <div class="col-lg-3 col-md-3 ">
-
-                    <div class="stats-div">
-                        <i class="fa fa-building fa-5x"></i>
-                        <h3>250 +</h3>
-                        <h4>Offices</h4>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 ">
-                    <div class="stats-div">
-                        <i class="fa fa-comments-o fa-5x"></i>
-                        <h3>1305+</h3>
-                        <h4>Clients</h4>
-                    </div>
                 </div>
             </div>
         </div>

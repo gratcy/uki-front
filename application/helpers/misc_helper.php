@@ -24,8 +24,10 @@ function __get_upload_file($file, $type=1) {
 		return $CI -> config -> config['upload']['host'] . $CI -> config -> config['upload']['gallery']['path'] . $file;
     elseif ($type == 3)
 		return $CI -> config -> config['upload']['host'] . $CI -> config -> config['upload']['slideshow']['path'] . $file;
-    else
+    elseif ($type == 4)
         return $CI -> config -> config['upload']['host'] . $CI -> config -> config['upload']['testimonial']['path'] . $file;
+    else
+        return $CI -> config -> config['upload']['host'] . $CI -> config -> config['upload']['events']['path'] . $file;
 }
 
 function __get_month($date) {
@@ -66,12 +68,12 @@ function __get_menus() {
 function __get_last_posts() {
     $CI =& get_instance();
     $CI -> load -> model('home/Home_model');
-    $posts = $CI -> Home_model -> __get_last_posts($CI -> config -> config['faculty'], 2);
+    $posts = $CI -> Home_model -> __get_last_posts($CI -> config -> config['faculty'], $CI -> config -> config['category']['announcement'], 2);
     return $posts;
 }
 
 function __grep_image_url($html) {
-    preg_match_all("<img[^']*?src=\"([^']*?)\"[^']*?>",$html, $result);
+    preg_match_all("/src=[\"\']?([^\"\']?.*(png|jpg|gif))[\"\']?/i",$html, $result);
     if (!empty($result[1][0])) return $result[1][0];
 }
 

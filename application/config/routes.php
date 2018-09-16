@@ -55,3 +55,4 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['page/(:num)'] = 'pages/home/index/$1';
 $route['post/(:num)'] = 'posts/home/index/$1';
+$route['event/(:num)'] = 'events/home/index/$1';

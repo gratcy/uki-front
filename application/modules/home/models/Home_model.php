@@ -20,8 +20,16 @@ class Home_model extends CI_Model {
 		return $sql -> result();
 	}
 
-	function __get_last_posts($faculty, $limit) {
-		$sql = $this -> db -> query("SELECT * FROM posts_tab WHERE pstatus=1 AND pfaculty=".$faculty." ORDER BY pid DESC LIMIT " . $limit, FALSE);
+	function __get_last_posts($faculty, $categorynot, $limit) {
+		if (!$categorynot)
+			$sql = $this -> db -> query("SELECT * FROM posts_tab WHERE pstatus=1 AND pfaculty=".$faculty." ORDER BY pid DESC LIMIT " . $limit, FALSE);
+		else
+			$sql = $this -> db -> query("SELECT * FROM posts_tab WHERE pcid != ".$categorynot." AND pstatus=1 AND pfaculty=".$faculty." ORDER BY pid DESC LIMIT " . $limit, FALSE);
+		return $sql -> result();
+	}
+
+	function __get_last_events($faculty, $limit) {
+		$sql = $this -> db -> query("SELECT * FROM events_tab WHERE estatus=1 AND efaculty=".$faculty." ORDER BY eid DESC LIMIT " . $limit, FALSE);
 		return $sql -> result();
 	}
 

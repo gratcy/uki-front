@@ -800,3 +800,93 @@ padding: 1px;
 .news-updated-three img {width: 100%;height: 120px}
 .newsupdate-title {font-weight: bold;font-size: 14px}
 .newsupdate-date {font-size: 10px;color: #4d4d4d}
+
+.thumb-calendar-event{
+    height:80px;
+    width: 80px;
+    background-color: rgba(0, 0, 102, 0.85);
+    position:relative !important;
+    border: thin solid #fff;
+    line-height: normal;
+    overflow: hidden;
+
+}
+.thumb-calendar-event:last-child {
+    margin-bottom: 0;
+}
+
+.thumb-calendar-event:before, .thumb-calendar-event:after {
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 58px;
+    right: 0;
+    content: "";
+}
+.thumb-calendar-event:before {
+    border-top: solid 10px transparent;
+    border-right: solid 10px rgba(232, 232, 232,1);
+    border-left: solid 10px transparent;
+    border-bottom: solid 10px rgba(232, 232, 232,1);
+}
+.thumb-calendar-event:after {
+    border-bottom: solid 10px transparent;
+    border-left: solid 10px rgba(0, 0, 102, 1);
+    border-top-left-radius: 5px;
+    border-right: solid 10px transparent;
+    border-top: solid 10px rgba(0, 0, 102, 1);
+    box-shadow: -1px 1px 3px #212835;
+}
+
+.thumb-calendar-short-date{
+    height:0px;
+    width: 80px;
+    color: #fff;
+    font-size: 10pt;
+    overflow: visible;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.thumb-calendar-short-date p{
+    margin:0;
+}
+
+.thumb-calendar-short-date .thumb-month{
+    font-weight: bold;
+    border-bottom: thin double #fff;
+}
+.thumb-calendar-short-date .thumb-date{
+    height:10px;
+    font-size: 30pt;
+}
+.event-title a {
+  color: #024077;
+  font-weight: bold;
+}
+.event-item {
+  padding-bottom: 10px;
+}
+.events-detail > div:nth-child(1) {
+  text-align: center;
+  padding: 20px;
+}
+.block-home-posts {
+  height: 100px;
+  overflow: hidden;
+}
+.block-home-title {
+  height: 100px;
+  overflow: hidden;
+}
+.announcement {
+  text-align: center;
+}
+section#news-updated {
+  margin: 0!important;
+}
+section#home-service {
+  margin: 0!important;
+}
