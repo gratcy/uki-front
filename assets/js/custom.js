@@ -28,7 +28,6 @@
                 interval: 4000 //TIME IN MILLI SECONDS
             })
             // PRETTYPHOTO FUNCTION 
-
             $("a.preview").prettyPhoto({
                 social_tools: false
             });
@@ -49,5 +48,4 @@
     $(document).ready(function () {
         mainApp.main_fun();
     });
-
 }(jQuery));

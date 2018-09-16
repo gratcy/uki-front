@@ -31,29 +31,23 @@
 
     </div>
     <!--./ Main Slider End -->
-    <div id="welocme-note">
+    <?php if (count($announcement) > 0) : ?>
+        <section id="home-service" style="margin-top:20px;">
+            <div class="container announcement">
+                <div class="row ">
+                    <div class="col-lg-12 col-md-12  col-sm-12" >
+                        <i class="fa fa-bullhorn  fa-5x icon-round faa-horizontal animated"></i>
+                        <h4><strong>Pengumuman </strong></h4>
+                        <?php foreach($announcement as $k => $v) : ?>
+                            <?php echo $v -> pcontent; ?>
+                        <?php endforeach;?>
+                    </div>
 
-        <div class="welcome-div">
-            <i class="fa fa-paper-plane-o fa-2x"></i><span>WELCOME GUEST, HOW YOU FEELING ?  </span>
-        </div>
-
-    </div>
-    <!--./ Welcome Section End -->
-    <section id="home-service" style="margin-top:20px;">
-        <div class="container announcement">
-            <div class="row ">
-                <div class="col-lg-12 col-md-12  col-sm-12" >
-                    <i class="fa fa-bullhorn  fa-5x icon-round faa-horizontal animated"></i>
-                    <h4><strong>Pengumuman </strong></h4>
-                    <?php foreach($announcement as $k => $v) : ?>
-                        <?php echo $v -> pcontent; ?>
-                    <?php endforeach;?>
                 </div>
 
             </div>
-
-        </div>
-    </section>
+        </section>
+    <?php endif; ?>
     <!--./ Home Service End -->
     <section id="news-updated">
         <div class="container">
@@ -87,10 +81,10 @@
                     <h2>Events </h2>
                     <?php foreach($lastevents as $k => $v) : ?>
                     <div class="col-lg-12 event-item">
-                        <div class="col-lg-2" style="padding-left: 0">
-                        <div class="thumb-calendar-event"><div class="thumb-calendar-short-date"><p class="thumb-month"><?php echo date('M', strtotime($v -> edate));?> '<?php echo date('y', strtotime($v -> edate));?></p><p class="thumb-date"><?php echo date('d', strtotime($v -> edate));?></p></div></div>
+                        <div class="col-lg-2 col-md-2" style="padding-left: 0">
+                        <div class="thumb-calendar-event"><div class="thumb-calendar-short-date"><p class="thumb-month"><?php echo date('M', strtotime($v -> edatefrom));?> '<?php echo date('y', strtotime($v -> edatefrom));?></p><p class="thumb-date"><?php echo date('d', strtotime($v -> edatefrom));?></p></div></div>
                         </div>
-                        <div class="col-lg-8 event-title">
+                        <div class="col-lg-10 event-title">
                             <a href="<?php echo base_url('event/' . $v -> eid); ?>" title="<?php echo $v -> etitle; ?>"><?php echo $v -> etitle; ?></a>
                         </div>
                     </div>
