@@ -100,7 +100,7 @@
             <div class="row ">
                 <div class="col-lg-6 col-md-6 ">
                     <div class="stats-div">
-                        <i class="fa fa-rocket fa-5x"></i>
+                        <i class="fa fa-rocket fa-5x icon-round faa-horizontal animated"></i>
                         <h3>Visi</h3>
                         <p>Fakultas Sastra Universitas Kristen Indonesia (FS UKI) bervisi menjadi fakultas yang unggul dan bereputasi dalam dunia pendidikan, penelitian, dan pengabdian kepada masyarakat khususnya dalam bidang bahasa, sastra, dan budaya yang antisipatif terhadap perubahan di era globalisasi yang berjiwa Pancasila berdasarkan nilai-nilai kristiani.</p>
                     </div>
@@ -109,7 +109,7 @@
 
                 <div class="col-lg-6 col-md-6 ">
                     <div class="stats-div">
-                        <i class="fa fa-globe fa-5x"></i>
+                        <i class="fa fa-globe fa-5x icon-round faa-horizontal animated"></i>
                         <h3>Misi</h3>
                         <p>Fakultas Sastra Universitas Kristen Indonesia (FS UKI) memiliki misi mengembangkan pendidikan Sastra Inggris dan disiplin ilmu yang berkaitan dengan program studi tersebut.</p>
                     </div>

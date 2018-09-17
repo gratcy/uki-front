@@ -53,6 +53,8 @@ $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['posts'] = 'posts/home/posts';
+$route['categories/(:num)'] = 'posts/home/posts/$1';
 $route['page/(:num)'] = 'pages/home/index/$1';
 $route['post/(:num)'] = 'posts/home/index/$1';
 $route['event/(:num)'] = 'events/home/index/$1';

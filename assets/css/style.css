@@ -195,10 +195,10 @@ right: auto;
     color:#fff;
     text-align:center;
 }
-    .welcome-div span {
-        font-size:20px;
-        padding:0px 30px 0px 30px;
-    }
+.welcome-div span {
+    font-size:20px;
+    padding:0px 30px 0px 30px;
+}
 
 
     
@@ -207,12 +207,12 @@ right: auto;
     ===================================*/
 
 #home-service i {
-    color:#ff6a00;
+    color:#fff;
     cursor:pointer;
     
 }
 #home-service i:hover {
-    color:#565AB1;
+    color:#fbe83d;
      cursor:pointer;
       -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -358,7 +358,6 @@ padding:30px;
     text-align:center;
     width: 100%;
     min-height: 100px;
-    padding: 30px 20px 30px 20px;
     color:#fff;
 }
 
@@ -822,7 +821,11 @@ padding: 1px;
   width: 100px;
 }
 .news-updated-three img {width: 100%;height: 120px}
-.newsupdate-title {font-weight: bold;font-size: 14px}
+.newsupdate-title {
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+}
 .newsupdate-date {font-size: 10px;color: #4d4d4d}
 
 .thumb-calendar-event{
@@ -889,6 +892,7 @@ padding: 1px;
 .event-title a {
   color: #024077;
   font-weight: bold;
+  text-transform: uppercase;
 }
 .event-item {
   padding-bottom: 10px;
@@ -915,4 +919,22 @@ section#home-service {
   margin: 0!important;
   background-color: #565AB1;
   color: #fff;
+}
+.custom-blog img {
+  width: 100%;
+  height: 280px;
+}
+.blog-single {
+  padding-top: 100px;
+}
+.blog-single > div > ol.breadcrumb {
+  margin-bottom: 0!important;
+}
+.stats-div > i:hover {
+    color:#fbe83d;
+   cursor:pointer;
+    -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
