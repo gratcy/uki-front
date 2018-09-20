@@ -732,6 +732,10 @@ padding: 1px;
     padding-bottom:50px;
 }
 
+.menu-top-social-hide {
+  display: none!important;
+}
+
        /*=====================================
    Media Queries
     ===================================*/
@@ -772,6 +776,12 @@ padding: 1px;
   }
   .blog-single img {
     width: 100%!important;
+  }
+  .menu-top-social {
+    display: none!important;
+  }
+  .menu-top-social-hide {
+    display: block!important;
   }
 }
        
@@ -816,6 +826,12 @@ padding: 1px;
   }
   .blog-single img {
     width: 100%!important;
+  }
+  .menu-top-social {
+    display: none!important;
+  }
+  .menu-top-social-hide {
+    display: block!important;
   }
 }
 
@@ -941,6 +957,7 @@ section#home-service {
 }
 .blog-single > div > ol.breadcrumb {
   margin-bottom: 0!important;
+  padding: 8px 0!important;
 }
 .stats-div > i:hover {
     color:#fbe83d;
@@ -949,4 +966,21 @@ section#home-service {
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+.share-social h3 {
+  font-size: 14px;
+  color: #6b6b6b;
+  text-decoration: underline;
+}
+.share-social a {
+  color: #6b6b6b!important;
+  font-size: 20px;
+}
+.menu-top-social {
+  float: right;
+  font-weight: bold;
+  font-size: 14px;
+}
+#link-fakultas a {
+  color: #fff;
 }

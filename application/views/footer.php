@@ -3,7 +3,7 @@
     <div id="footer-sec">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-4" id="about-ftr">
+                <div class="col-lg-3 col-md-3" id="about-ftr">
                     <i class="fa fa-building fa-2x"></i>
                     <span>SASTRA INGGRIS</span>
                     <small>Sekilas tentang Sastra Inggris</small>
@@ -11,7 +11,7 @@
 Fakultas Sastra didirikan pada tahun 1953 sebagai wujud dari visi para pendiri Universitas Kristen Indonesia yang melihat pentingnya tenaga-tenaga kerja terampil yang mampu berkomunikasi dengan komunitas internasional yang diperlukan Negara Republik Indonesia yang pada waktu itu belum lama merdeka. Sejak didirikannya sampai sekarang.
                     </p>
                 </div>
-                <div class="col-lg-4 col-md-4">
+                <div class="col-lg-3 col-md-3">
                     <i class="fa fa-paper-plane-o fa-2x"></i>
                     <span>From the blog</span>
                     <small>News updates about UKI Fakultas Sastra</small>
@@ -35,8 +35,8 @@ Fakultas Sastra didirikan pada tahun 1953 sebagai wujud dari visi para pendiri U
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-4">
-                    <i class="fa fa-sliders fa-2x"></i>
+                <div class="col-lg-3 col-md-3">
+                    <i class="fa fa-map-marker fa-2x"></i>
                     <span>Our location</span>
                     <small>Our Zones are strategically located throughout east and central Jakarta</small>
 
@@ -55,6 +55,21 @@ Jl.Mayjen Sutoyo No 2. Jakarta
 Jl.Diponegoro No. 84-86, Jakarta Pusat
                     <br />
 10430 - Indonesia 021-3920174
+                </div>
+                <div class="col-lg-3 col-md-3" id="link-fakultas">
+                    <i class="fa fa-link fa-2x"></i>
+                    <span>WEBSITE UKI</span>
+<ul class="list-unstyled">
+                        <li><a href="http://uki.ac.id" target="_blank">Universitas Kristen Indonesia</a></li>
+                        <li><a href="http://fkip.uki.ac.id" target="_blank">Fakultas Keguruan dan Ilmu Pendidikan</a></li>
+                        <li><a href="http://sastra.uki.ac.id" target="_blank">Fakultas Sastra</a></li>
+                        <li><a href="http://fe.uki.ac.id" target="_blank">Fakultas Ekonomi</a></li>
+                        <li><a href="http://fh.uki.ac.id" target="_blank">Fakultas Hukum</a></li>
+                        <li><a href="http://fk.uki.ac.id" target="_blank">Fakultas Kedokteran</a></li>
+                        <li><a href="http://ft.uki.ac.id" target="_blank">Fakultas Teknik</a></li>
+                        <li><a href="http://fisipol.uki.ac.id" target="_blank">Fakultas Ilmu Sosial &amp; Politik</a></li>
+                        <li><a href="http://pps.uki.ac.id" target="_blank">Program Pascasarjana</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
