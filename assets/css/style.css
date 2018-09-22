@@ -512,6 +512,12 @@ border: 1px solid #e1e1e1;
 .portfolio-item {
     border:2px solid #565AB1;
     margin:3px;
+    height: 230px;
+}
+.portfolio-item img {
+  max-height: 170px;
+  width: 95%;
+  padding-left: 5%;
 }
     .portfolio-item p {
         padding:10px;
