@@ -49,9 +49,9 @@ function __get_menus() {
     $res = '';
     foreach ($menus as $key => $v) {
         $res .= '<li class="dropdown">';
-        $res .= '<a href="'.base_url('page/' . $v -> pid).'">'.strtoupper($v -> ptitle).'<span></span></a>';
         $childs = $CI -> Home_model -> __get_menus($CI -> config -> config['faculty'], $v -> pid);
         if (count($childs) > 0) {
+            $res .= '<a href="#">'.strtoupper($v -> ptitle).'<span></span></a>';
             $res .= '<ul class="dropdown-menu dropdown-menu-left">';
             foreach ($childs as $k1 => $v1) {
                 $res .= '<li>';
@@ -59,6 +59,9 @@ function __get_menus() {
                 $res .= '</li>';
             }
             $res .= '</ul>';
+        }
+        else {
+            $res .= '<a href="'.base_url('page/' . $v -> pid).'">'.strtoupper($v -> ptitle).'<span></span></a>';
         }
         $res .= '</li>';
     }
