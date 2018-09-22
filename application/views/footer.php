@@ -40,6 +40,7 @@ Fakultas Sastra didirikan pada tahun 1953 sebagai wujud dari visi para pendiri U
                     <div id="blog-footer-div">
                     <i class="fa fa-link fa-2x"></i>
                     <span>WEBSITE UKI</span>
+                    <small>Informasi lebih detail mengenai UKI</small>
                     <ul class="list-unstyled">
                         <li><a href="http://uki.ac.id" target="_blank">Universitas Kristen Indonesia</a></li>
                         <li><a href="http://fkip.uki.ac.id" target="_blank">Fakultas Keguruan dan Ilmu Pendidikan</a></li>

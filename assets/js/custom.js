@@ -47,6 +47,14 @@
 
     $(document).ready(function () {
         mainApp.main_fun();
+
+        $( 'li.dropdown a[href="#"]').click(function(e) {
+            e.preventDefault();
+            $("ul.dropdown-menu").css("display","block");
+        }, function() {
+            $("ul.dropdown-menu").css("display","none");
+        });
+
     });
 
      $(window).load(function() {
