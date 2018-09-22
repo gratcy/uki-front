@@ -12,9 +12,9 @@ class Posts_model extends CI_Model {
 
     function __get_posts_categories($faculty, $cid, $notCid) {
     	if ($cid)
-			$sql = $this -> db -> query("SELECT a.*,b.cname FROM posts_tab a LEFT JOIN categories_tab b ON a.pcid=b.cid WHERE a.pstatus=1 AND a.pfaculty=".$faculty." AND a.pcid=".$cid, FALSE);
+			$sql = $this -> db -> query("SELECT a.*,b.cname,c.uname FROM posts_tab a LEFT JOIN categories_tab b ON a.pcid=b.cid LEFT JOIN users_tab c ON a.puid=c.uid WHERE a.pstatus=1 AND a.pfaculty=".$faculty." AND a.pcid=".$cid, FALSE);
 		else
-			$sql = $this -> db -> query("SELECT a.*,b.cname FROM posts_tab a LEFT JOIN categories_tab b ON a.pcid=b.cid WHERE a.pstatus=1 AND a.pfaculty=".$faculty." AND a.pcid!=".$notCid, FALSE);
+			$sql = $this -> db -> query("SELECT a.*,b.cname,c.uname FROM posts_tab a LEFT JOIN categories_tab b ON a.pcid=b.cid LEFT JOIN users_tab c ON a.puid=c.uid WHERE a.pstatus=1 AND a.pfaculty=".$faculty." AND a.pcid!=".$notCid, FALSE);
 		return $sql -> result();
 	}
 }

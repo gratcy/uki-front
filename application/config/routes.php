@@ -57,4 +57,5 @@ $route['posts'] = 'posts/home/posts';
 $route['categories/(:num)'] = 'posts/home/posts/$1';
 $route['page/(:num)'] = 'pages/home/index/$1';
 $route['post/(:num)'] = 'posts/home/index/$1';
-$route['event/(:num)'] = 'events/home/index/$1';
+$route['event/(:num)'] = 'events/home/detail/$1';
+$route['events'] = 'events/home/index';

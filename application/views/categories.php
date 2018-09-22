@@ -14,8 +14,9 @@
                       <h2><?php echo $v -> ptitle; ?></h2>
                         <div>
                             <ol class="breadcrumb">
-                              <li><a href="<?php echo base_url('categories/' . $v -> pcid); ?>">Posted in : <?php echo $v -> cname; ?></a></li>
-                              <li><a href="<?php echo base_url('post/' . $v -> pid); ?>">On: <?php echo __get_date($v -> pdate, 2); ?></a></li>
+                              <li><a href="<?php echo base_url('post/' . $v -> pid); ?>">Posted By : <b><?php echo $v -> uname; ?></b></a></li>
+                              <li><a href="<?php echo base_url('categories/' . $v -> pcid); ?>">Posted in : <b><?php echo $v -> cname; ?></b></a></li>
+                              <li><a href="<?php echo base_url('post/' . $v -> pid); ?>">On: <b><?php echo __get_date($v -> pdate, 2); ?></b></a></a></li>
                             </ol>
                         </div>
                     <img src="<?php echo __grep_image_url($v -> pcontent); ?>" class="img-rounded img-responsive " alt="<?php echo $v -> ptitle; ?>" title="<?php echo $v -> ptitle; ?>" />
