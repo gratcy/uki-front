@@ -8,12 +8,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="" />
     <meta name="author" content="" />
      <!--[if IE]>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <![endif]-->
-    <title>UKI</title>
+    <title><?php echo (isset($title) ? $title . ' | ' : '')  . $this -> config -> config['site']['title']; ?></title>
+    <meta name="description" content="<?php echo (isset($title) ? $title . ' | ' : '')  . $this -> config -> config['site']['title']; ?>" />
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url(); ?>/assets/img/favicon.ico">
 
     <!--  Bootstrap Style -->
