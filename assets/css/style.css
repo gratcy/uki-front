@@ -790,6 +790,13 @@ padding: 1px;
   .menu-top-social-hide {
     display: block!important;
   }
+  .control-icon {
+    top: 28%!important;
+  }
+  .pad-top-botm {
+    padding-top: 0!important;
+    padding-bottom: 0!important;
+  }
 }
        
 @media all and (max-width: 845px) and (min-width: 100px) {
@@ -839,6 +846,13 @@ padding: 1px;
   }
   .menu-top-social-hide {
     display: block!important;
+  }
+  .control-icon {
+    top: 28%!important;
+  }
+  .pad-top-botm {
+    padding-top: 0!important;
+    padding-bottom: 0!important;
   }
 }
 
@@ -1003,4 +1017,8 @@ div.twitter {
 }
 .testimonial-name {
   padding-left: 20px;
+}
+
+.navbar-default .navbar-nav > li > a:focus {
+  color: #fff;
 }

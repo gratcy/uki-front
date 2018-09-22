@@ -98,7 +98,7 @@ Jl.Diponegoro No. 84-86, Jakarta Pusat
     <script src="<?php echo base_url(); ?>assets/js/bootstrap.js"></script>
         <!--  Custom Scripts -->
     <script src="<?php echo base_url(); ?>assets/js/jquery.prettyPhoto.js"></script>
-    <script src="<?php echo base_url(); ?>assets/js/custom.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/custom.js?<?php time(); ?>"></script>
 <!-- mibew button -->
 <!-- <a id="mibew-agent-button" href="<?php echo __get_livechat_url(1) ;?>index.php/chat?locale=id" target="_blank" onclick="Mibew.Objects.ChatPopups['5b8a782315eb483d'].open();return false;"><img src="<?php echo __get_livechat_url(1) ;?>index.php/b?i=mibew&amp;lang=id" border="0" alt="" /></a><script type="text/javascript" src="http://localhost:4511/js/compiled/chat_popup.js"></script><script type="text/javascript">Mibew.ChatPopup.init({"id":"5b8a782315eb483d","url":"<?php echo __get_livechat_url(2) ;?>index.php\/chat?locale=id","preferIFrame":true,"modSecurity":false,"forceSecure":false,"width":640,"height":480,"resizable":true,"styleLoader":"<?php echo __get_livechat_url(2) ;?>index.php\/chat\/style\/popup"});</script> -->
 <!-- / mibew button -->
