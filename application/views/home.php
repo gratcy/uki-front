@@ -123,27 +123,41 @@
         <div class="container">
 
             <div class="row testimonial">
-                <div class="col-lg-12 col-md-12" >
+                <div class="col-lg-8 col-md-8" >
                     <div class="text-center">
                         <h3>KATA MEREKA, TENTANG UKI</h3>
                         <br />
                         <br />
                     </div>
-                </div>
-                <?php foreach($testimonial as $k => $v) : ?>
-                <div class="col-lg-4 col-md-4">
-                    <blockquote>
-                        <p><?php echo $v -> ttestimony; ?></p>
-                    </blockquote>
-                    <div class="col-lg-4">
-                        <img src="<?php echo __get_upload_file($v -> tphoto, 4); ?>">
+                    <?php foreach($testimonial as $k => $v) : ?>
+                    <div class="col-lg-6 col-md-6">
+                        <blockquote>
+                            <p><?php echo $v -> ttestimony; ?></p>
+                        <div class="col-lg-4 testimonial-photo">
+                            <img src="<?php echo __get_upload_file($v -> tphoto, 4); ?>">
+                        </div>
+                        <div class="col-lg-8 testimonial-name">
+                            <p><?php echo $v -> tname; ?></p>
+                            <p><b><?php echo $v -> tcompany; ?></b></p>
+                        </div>
+                        </blockquote>
                     </div>
-                    <div class="col-lg-8">
-                        <p><?php echo $v -> tname; ?></p>
-                        <p><b><?php echo $v -> tcompany; ?></b></p>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
-                <?php endforeach; ?>
+                <div class="col-lg-4 col-md-4" >
+                    <div class="text-center">
+                        <h3>TWEETS TERKINI</h3>
+                        <br />
+                        <br />
+                    </div>
+                <div class="col-lg-12 col-md-12">
+                <div class="twitter" data-aos="zoom-in-up" data-aos-duration="700" data-aos-delay="200" data-aos-once="true">
+                    <a class="twitter-timeline" data-link-color="#ff6a00" data-cards="hidden" data-theme="dark" data-tweet-limit="3" data-chrome="noheader nofooter noborders transparent" href="https://twitter.com/Kampus_UKI">Tweets by Kampus_UKI</a>
+                    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                </div>
+
+                </div>
             </div>
 
         </div>

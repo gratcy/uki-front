@@ -48,4 +48,8 @@
     $(document).ready(function () {
         mainApp.main_fun();
     });
+
+     $(window).load(function() {
+     $(".twitter-timeline").contents().find('head').append( '.p-name { color:#fff !important; } ' );
+    })
 }(jQuery));

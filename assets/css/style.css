@@ -840,13 +840,14 @@ padding: 1px;
 #blog-footer-div > .media > .pull-left > img {width: 64px;height: 64px}
 #mibew-agent-button {bottom: 5px; position: fixed;right: 5px;z-index: 10000;}
 .testimonial blockquote {
-  min-height: 230px;
+  min-height: 400px;
 }
 .testimonial p {
   font-size: 12px;
 }
 .testimonial img {
   width: 100px;
+  border-radius: 50%;
 }
 .news-updated-three img {width: 100%;height: 120px}
 .newsupdate-title {
@@ -983,4 +984,16 @@ section#home-service {
 }
 #link-fakultas a {
   color: #fff;
+}
+
+div.twitter {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+.testimonial-photo, .testimonial-name {
+  margin: 0;
+  padding: 0;
+}
+.testimonial-name {
+  padding-left: 20px;
 }
