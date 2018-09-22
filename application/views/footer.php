@@ -84,7 +84,7 @@ Jl.Diponegoro No. 84-86, Jakarta Pusat
 
             <div class="row">
                 <div class="col-lg-12 col-md-12">
-                    &copy; <?php echo date('Y'); ?> All rights reserved
+                    &copy; <?php echo date('Y'); ?> Universitas Kristen Indonesia
                 </div>
             </div>
 
