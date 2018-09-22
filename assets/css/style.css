@@ -403,10 +403,10 @@ text-align:center;
       padding-right:10px;
 }
 #footser-end {
-    text-align:right;
+  text-align:center;
   background-color:#21165F; 
-   color:#fff;
-   padding:10px;
+  color:#fff;
+  padding:10px;
 }
 
 
