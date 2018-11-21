@@ -36,3 +36,4 @@ $config['upload']['slideshow']['path'] = 'slideshow/';
 $config['upload']['testimonial']['path'] = 'testimonial/';
 $config['upload']['events']['path'] = 'events/';
 $config['livechat']['host'] = getenv('LIVECHAT_URL');
+$config['api']['host'] = getenv('API_URL');
