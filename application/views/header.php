@@ -12,8 +12,16 @@
      <!--[if IE]>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <![endif]-->
-    <title><?php echo (isset($title) ? $title . ' | ' : '')  . $this -> config -> config['site']['title']; ?></title>
-    <meta name="description" content="<?php echo (isset($title) ? $title . ' | ' : '')  . $this -> config -> config['site']['title']; ?>" />
+    <title><?php echo (!empty($title) ? $title . ' | ' : '')  . $this -> config -> config['site']['title']; ?></title>
+
+    <meta name="keywords" content="<?php echo (!empty($title) ? $title . ' | ' : '')  . $this -> config -> config['site']['title']; ?>" />
+    <meta name="description" content="<?php echo (!empty($desc) ? $desc : $this -> config -> config['site']['title']); ?>" />
+    <meta property="og:title" content="<?php echo (!empty($title) ? $title . ' | ' : '')  . $this -> config -> config['site']['title']; ?>" />
+    <meta property="og:url" content="<?php echo base_url($_SERVER['REQUEST_URI']);?>" />
+    <meta property="og:description" content="<?php echo (!empty($desc) ? $desc : $this -> config -> config['site']['title']); ?>">
+    <meta property="og:image" itemprop="image" content="<?php echo !empty($ogImage) ? $ogImage : base_url('assets/img/logo-lppm-uki.png'); ?>">
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="UKI" />
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url(); ?>/assets/img/favicon.ico">
 
     <!--  Bootstrap Style -->

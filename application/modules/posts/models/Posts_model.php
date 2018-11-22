@@ -1,20 +1,17 @@
 <?php
-class Posts_model extends CI_Model {
-    function __construct() {
-        parent::__construct();
-        $this->load->database();
-    }
-
+class Posts_model {
     function __get_posts_detail($faculty, $id) {
-		$sql = $this -> db -> query("SELECT a.*,b.cname,c.uname FROM posts_tab a LEFT JOIN categories_tab b ON a.pcid=b.cid LEFT JOIN users_tab c ON a.puid=c.uid WHERE a.pstatus=1 AND a.pfaculty=".$faculty." AND a.pid=".$id, FALSE);
-		return $sql -> result();
+    	$path = 'posts/detail/'.$faculty.'/' . $id;
+    	$data = __fetchData($path, []);
+		return $data;
 	}
 
     function __get_posts_categories($faculty, $cid, $notCid) {
-    	if ($cid)
-			$sql = $this -> db -> query("SELECT a.*,b.cname,c.uname FROM posts_tab a LEFT JOIN categories_tab b ON a.pcid=b.cid LEFT JOIN users_tab c ON a.puid=c.uid WHERE a.pstatus=1 AND a.pfaculty=".$faculty." AND a.pcid=".$cid, FALSE);
-		else
-			$sql = $this -> db -> query("SELECT a.*,b.cname,c.uname FROM posts_tab a LEFT JOIN categories_tab b ON a.pcid=b.cid LEFT JOIN users_tab c ON a.puid=c.uid WHERE a.pstatus=1 AND a.pfaculty=".$faculty." AND a.pcid!=".$notCid, FALSE);
-		return $sql -> result();
+    	$params['category'] = $cid;
+    	$params['limit'] = $limit;
+    	$params['notCategory'] = $notCid;
+    	$path = 'posts/get/'.$faculty.'/';
+    	$data = __fetchData($path, $params);
+		return $data;
 	}
 }

@@ -12,7 +12,8 @@ class Home extends MX_Controller {
 	{
 		$data['data'] = $this -> Pages_model -> __get_pages_detail($this -> config -> config['faculty'], $id);
 		$data['plugins'] = $this -> plugins_lib -> __get_plugins($this -> config -> config['faculty'], $id);
-		$data['title'] = $data['data'][0] -> ptitle;
+		$data['title'] = $data['data']['data'][0]['ptitle'];
+		$data['desc'] = $data['data']['data'][0]['ptitle'];
 		$this->load->view('pages', $data);
 	}
 }

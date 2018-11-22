@@ -42,26 +42,25 @@ function __get_day($date) {
     return $arr[$date];
 }
 
-function __get_menus() {
+function __get_menus($parent=0) {
     $CI =& get_instance();
     $CI -> load -> model('home/Home_model');
-    $menus = $CI -> Home_model -> __get_menus($CI -> config -> config['faculty'], 0);
+    $menus = $CI -> Home_model -> __get_menus($CI -> config -> config['faculty']);
     $res = '';
-    foreach ($menus as $key => $v) {
+    foreach ($menus['data'] as $key => $v) {
         $res .= '<li class="dropdown">';
-        $childs = $CI -> Home_model -> __get_menus($CI -> config -> config['faculty'], $v -> pid);
-        if (count($childs) > 0) {
-            $res .= '<a href="#">'.strtoupper($v -> ptitle).'<span></span></a>';
+        if (isset($v['childs']) && count($v['childs']) > 0) {
+            $res .= '<a href="#">'.strtoupper($v['ptitle']).'<span></span></a>';
             $res .= '<ul class="dropdown-menu dropdown-menu-left">';
-            foreach ($childs as $k1 => $v1) {
+            foreach ($v['childs'] as $k1 => $v1) {
                 $res .= '<li>';
-                $res .= '<a href="'.base_url('page/' . $v1 -> pid).'">'.$v1 -> ptitle.'</a>';
+                $res .= '<a href="'.base_url('page/' . $v1['pid']).'">'.$v1['ptitle'].'</a>';
                 $res .= '</li>';
             }
             $res .= '</ul>';
         }
         else {
-            $res .= '<a href="'.base_url('page/' . $v -> pid).'">'.strtoupper($v -> ptitle).'<span></span></a>';
+            $res .= '<a href="'.base_url('page/' . $v['pid']).'">'.strtoupper($v['ptitle']).'<span></span></a>';
         }
         $res .= '</li>';
     }
@@ -97,4 +96,18 @@ function __limit_word($text, $limit) {
 function __get_image_url($text) {
     preg_match('/<img.+src=[\'"](?P<src>.+?)[\'"].*>/i', $text, $result);
     return isset($result[1]) ? $result[1] : '';
+}
+
+function __fetchData($path, $params){
+    $CI =& get_instance();
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $CI -> config -> config['api']['host'] . $path .'?'.http_build_query( $params ) );
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 20);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+
+    $result = curl_exec($ch);
+    curl_close($ch);
+    return json_decode($result, true);
 }

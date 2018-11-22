@@ -4,11 +4,11 @@
         <div id="carousel-example" class="carousel slide" data-ride="carousel">
 
             <div class="carousel-inner">
-<?php foreach ($slideshow as $k => $v) : ?>
+<?php foreach ($slideshow['data'] as $k => $v) : ?>
                 <div class="item <?php echo $k === 0 ? 'active' : ''; ?>">
-                    <a target="_blank" href="<?php echo $v -> surl; ?>"><img src="<?php echo __get_upload_file($v -> sfile, 3); ?>" alt="" /></a>
+                    <a target="_blank" href="<?php echo $v['surl']; ?>"><img src="<?php echo __get_upload_file($v['sfile'], 3); ?>" alt="" /></a>
                     <div class="carousel-caption">
-                        <h4 class="back-light"><?php echo $v -> stitle; ?>
+                        <h4 class="back-light"><?php echo $v['stitle']; ?>
                         </h4>
                     </div>
                 </div>
@@ -16,7 +16,7 @@
             </div>
             <!--INDICATORS-->
             <ol class="carousel-indicators">
-<?php foreach ($slideshow as $k => $v) : ?>
+<?php foreach ($slideshow['data'] as $k => $v) : ?>
                 <li data-target="#carousel-example" data-slide-to="<?php echo $k; ?>" class="<?php echo $k === 0 ? 'active' : ''; ?>"></li>
 <?php endforeach; ?>
             </ol>
@@ -31,15 +31,15 @@
 
     </div>
     <!--./ Main Slider End -->
-    <?php if (count($announcement) > 0) : ?>
+    <?php if (count($announcement['data']) > 0) : ?>
         <section id="home-service" style="margin-top:20px;">
             <div class="container announcement">
                 <div class="row ">
                     <div class="col-lg-12 col-md-12  col-sm-12" >
                         <i class="fa fa-bullhorn  fa-5x icon-round faa-horizontal animated"></i>
                         <h4><strong>Pengumuman </strong></h4>
-                        <?php foreach($announcement as $k => $v) : ?>
-                            <?php echo $v -> pcontent; ?>
+                        <?php foreach($announcement['data'] as $k => $v) : ?>
+                            <?php echo $v['pcontent']; ?>
                         <?php endforeach;?>
                     </div>
 
@@ -54,21 +54,21 @@
             <div class="row pad-top-botm">
                 <div class="col-lg-6 col-md-6">
                     <h2>Berita Terkini </h2>
-                    <?php foreach($newsupdate as $k => $v) : ?>
+                    <?php foreach($newsupdate['data'] as $k => $v) : ?>
                         <div class="col-lg-4 col-md-4 news-updated-three">
-                        <img src="<?php echo __get_image_url($v -> pcontent); ?>" alt="<?php echo $v -> ptitle; ?>" title="<?php echo $v -> ptitle; ?>">
+                        <img src="<?php echo __get_image_url($v['pcontent']); ?>" alt="<?php echo $v['ptitle']; ?>" title="<?php echo $v['ptitle']; ?>">
                         <div class="block-home-title">
                         <p class="newsupdate-title">
-                            <?php echo $v -> ptitle; ?>
+                            <?php echo $v['ptitle']; ?>
                         </p>
                         </div>
-                        <p class="newsupdate-date">last updated <?php echo __get_date($v -> pdate, 1); ?></p>
+                        <p class="newsupdate-date">last updated <?php echo __get_date($v['pdate'], 1); ?></p>
                         <div class="block-home-posts">
                         <p style="text-align: justify;">
-                            <?php echo __limit_word($v -> pcontent, 15); ?>
+                            <?php echo __limit_word($v['pcontent'], 15); ?>
                         </p>
                         </div>
-                    <button class="btn btn-primary" title="<?php echo $v -> ptitle; ?>" type="button" onclick="window.location.href='<?php echo base_url('post/' . $v -> pid); ?>'">
+                    <button class="btn btn-primary" title="<?php echo $v['ptitle']; ?>" type="button" onclick="window.location.href='<?php echo base_url('post/' . $v['pid']); ?>'">
                         Read Full Details <span class="badge">+</span>
                     </button>
                     <br />
@@ -79,13 +79,13 @@
 
                 <div class="col-lg-6 col-md-6">
                     <h2>Events </h2>
-                    <?php foreach($lastevents as $k => $v) : ?>
+                    <?php foreach($lastevents['data'] as $k => $v) : ?>
                     <div class="col-lg-12 event-item">
                         <div class="col-lg-2 col-md-2" style="padding-left: 0">
-                        <div class="thumb-calendar-event"><div class="thumb-calendar-short-date"><p class="thumb-month"><?php echo date('M', strtotime($v -> edatefrom));?> '<?php echo date('y', strtotime($v -> edatefrom));?></p><p class="thumb-date"><?php echo date('d', strtotime($v -> edatefrom));?></p></div></div>
+                        <div class="thumb-calendar-event"><div class="thumb-calendar-short-date"><p class="thumb-month"><?php echo date('M', strtotime($v['edatefrom']));?> '<?php echo date('y', strtotime($v['edatefrom']));?></p><p class="thumb-date"><?php echo date('d', strtotime($v['edatefrom']));?></p></div></div>
                         </div>
                         <div class="col-lg-10 event-title">
-                            <a href="<?php echo base_url('event/' . $v -> eid); ?>" title="<?php echo $v -> etitle; ?>"><?php echo $v -> etitle; ?></a>
+                            <a href="<?php echo base_url('event/' . $v['eid']); ?>" title="<?php echo $v['etitle']; ?>"><?php echo $v['etitle']; ?></a>
                         </div>
                     </div>
                     <?php endforeach;?>
@@ -129,16 +129,16 @@
                         <br />
                         <br />
                     </div>
-                    <?php foreach($testimonial as $k => $v) : ?>
+                    <?php foreach($testimonial['data'] as $k => $v) : ?>
                     <div class="col-lg-6 col-md-6">
                         <blockquote>
-                            <p><?php echo $v -> ttestimony; ?></p>
+                            <p><?php echo $v['ttestimony']; ?></p>
                         <div class="col-lg-4 testimonial-photo">
-                            <img src="<?php echo __get_upload_file($v -> tphoto, 4); ?>">
+                            <img src="<?php echo __get_upload_file($v['tphoto'], 4); ?>">
                         </div>
                         <div class="col-lg-8 testimonial-name">
-                            <p><?php echo $v -> tname; ?></p>
-                            <p><b><?php echo $v -> tcompany; ?></b></p>
+                            <p><?php echo $v['tname']; ?></p>
+                            <p><b><?php echo $v['tcompany']; ?></b></p>
                         </div>
                         </blockquote>
                     </div>

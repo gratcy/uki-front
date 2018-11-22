@@ -20,15 +20,15 @@ Fakultas Sastra didirikan pada tahun 1953 sebagai wujud dari visi para pendiri U
                     <small>News updates about UKI Fakultas Sastra</small>
                         <?php
                         $posts = __get_last_posts();
-                        foreach ($posts as $key => $value) {
+                        foreach ($posts['data'] as $key => $value) {
                         ?>
                         <div class="media">
                             <div class="pull-left">
-                                <img src="<?php echo __grep_image_url($value -> pcontent); ?>" class="img-circle" alt="" />
+                                <img src="<?php echo __grep_image_url($value['pcontent']); ?>" class="img-circle" alt="" />
                             </div>
                             <div class="media-body">
-                                <span class="media-heading"><a href="<?php echo base_url('post/' . $value -> pid); ?>"><?php echo $value -> ptitle; ?></a></span>
-                                <small class="muted">Posted <?php echo __get_date($value -> pdate, 2); ?></small>
+                                <span class="media-heading"><a href="<?php echo base_url('post/' . $value['pid']); ?>"><?php echo $value['ptitle']; ?></a></span>
+                                <small class="muted">Posted <?php echo __get_date($value['pdate'], 2); ?></small>
                             </div>
                         </div>
                         <?php
