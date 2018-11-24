@@ -7,10 +7,10 @@
 <?php foreach ($slideshow['data'] as $k => $v) : ?>
                 <div class="item <?php echo $k === 0 ? 'active' : ''; ?>">
                     <a target="_blank" href="<?php echo $v['surl']; ?>"><img src="<?php echo __get_upload_file($v['sfile'], 3); ?>" alt="" /></a>
-                    <div class="carousel-caption">
+                    <!-- <div class="carousel-caption">
                         <h4 class="back-light"><?php echo $v['stitle']; ?>
                         </h4>
-                    </div>
+                    </div> -->
                 </div>
 <?php endforeach; ?>
             </div>
